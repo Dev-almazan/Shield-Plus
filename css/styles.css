@@ -1,0 +1,464 @@
+
+:root{
+    --bg-main: #FAFAFA;
+    --bg-principal: #1BA986;
+    --bg-secundario: #0E3B51;
+    --font-principal:"Poppins",  sans-serif;
+    --size-brand: 1.7em;
+    --size-nav: 1.2em;
+    --size-h1: 3em;
+    --size-h2: 2.4em;
+    --size-h3: 1.37em;
+    --size-p: 1.07em;
+    --width-screen:70%;
+    --line-h:70px;
+}
+
+body{
+    background-color: var(--bg-main);
+    font-family: var(--font-principal);
+    padding: 0 ;
+    margin: 0;
+}
+
+.cl-principal{
+    color: var(--bg-principal) ;
+}
+
+.cl-secundario {
+    color: var(--bg-secundario);
+}
+
+.btn-principal
+{
+    background-color: var(--bg-principal);
+    color: var(--bg-main);
+}
+
+.btn-secundario {
+    background-color: var(--bg-main);
+    color: var(--bg-secundario);
+    border: 2px solid var(--bg-secundario);
+}
+
+
+/*navbar*/
+
+#navbar{
+    font-family: var(--font-principal);
+    width: var(--width-screen);
+    margin: 0 auto;
+    padding: 2.5rem 0 0 0 ;
+}
+
+#navbar .navbar__group
+{
+
+    width: 100%;
+    display: flex;
+}
+
+#navbar .navbar-icon{
+    display: none;
+}
+
+#navbar div:nth-child(3)
+{
+    order: 3;
+}
+
+#navbar .navbar-brand
+{
+    text-decoration: none;
+    color: var(--bg-principal);
+    font-size: var(--size-brand);
+    font-weight: 600;
+}
+
+#navbar .navbar__btn {
+    text-decoration: none;
+    font-size: var(--size-btn);
+}
+
+#navbar .navbar__btn button:nth-child(1)
+{
+    background-color: var(--bg-main);
+    text-decoration: underline;
+    text-underline-offset: 12px;
+    font-weight: 600;
+}
+#navbar .navbar__btn button:nth-child(2)
+{
+    background-color: var(--bg-principal);
+    color: var(--bg-main);
+    padding: .6rem 1.5rem;
+}
+
+#navbar .navbar__list{
+    font-size: var(--size-btn);
+}
+
+#navbar .navbar__list li a
+{
+    text-decoration: none;
+    color: var(--bg-secundario);
+    padding:  0 2rem;
+     box-sizing: border-box;
+}
+
+
+/*main */
+
+.home
+{
+
+    width: var(--width-screen);
+    margin:  0 auto;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    padding: 4rem 0;
+   align-items: center;
+}
+
+.home h1
+{
+ 
+    color: var(--bg-secundario);
+    font-size: var(--size-h1);
+    font-weight: 600;
+    line-height: var(--line-h);
+}
+
+.home div:nth-child(1)
+{
+    padding: 4rem 0 ;
+    box-sizing: border-box;
+}
+
+.home div:nth-child(2)
+{
+    display: flex;
+    justify-content: right;
+}
+
+.home img {
+    width: auto;
+    height: auto;
+}
+
+.home p {
+    color: var(--bg-secundario);
+    font-size: var(--size-p);
+    font-weight: 300;
+
+    padding: .5rem 0;
+}
+
+.home div:nth-child(1) {
+    padding: 4rem  0rem;
+    box-sizing: border-box;
+}
+
+  .home button {
+      padding: .8rem 1rem;
+      border-radius: 10px;
+      font-weight: 600;
+      margin-right: .9rem;
+  }
+
+/* services */
+
+.services {
+    width: var(--width-screen);
+    margin: 0 auto;
+    padding: 2rem 0;
+    align-items: center;
+}
+
+.services__sec
+{
+    width: calc(var(--width-screen) - 25%);
+}
+
+.services h2 {
+    font-size: var(--size-h2);
+    line-height: var(--line-h);
+    color: var(--bg-secundario);
+    font-weight: 600;
+}
+
+.services p {
+    color: var(--bg-secundario);
+    font-size: var(--size-p);
+    font-weight: 300;
+    padding: .5rem 0;
+}
+
+
+.services h3 {
+    color: var(--bg-principal);
+    font-size: var(--size-h3);
+    font-weight: 600;
+}
+
+.services__group
+{
+    padding: 1rem 0;
+    box-sizing: border-box;
+
+}
+
+.services__group .card
+{
+    border-radius: 8px;
+    border: 2px solid #DCDCDC;
+}
+.services__group .card-text
+{
+    width: 85%;
+}
+
+.services__group svg {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.services__group  .active
+{
+    transition: .4s ease-in;
+    box-shadow: 0px 6px 5px 0px #00000017;
+    border: solid 2px solid var(--bg-main);
+}
+
+/*laptop screen*/
+ @media screen and (max-width:1600px) {
+:root {
+        --width-screen: 85%;
+    }
+
+    .services__sec {
+        width: calc(var(--width-screen) - 35%);
+    }
+ }
+
+ /*tablet screen*/
+
+  @media screen and (max-width:1350px) {
+
+    :root {
+            --width-screen: 95%;
+            --size-brand: 1.2em;
+                --size-nav: 1.1em;
+                --size-h1: 2.7em;
+                --size-h2: 2.2em;
+                --size-h3: 1.27em;
+                --size-p: 1em;
+        }
+
+        #navbar .navbar__list li a
+        {
+            padding: 0 .5rem;
+        }
+      
+                .home div:nth-child(2) {
+                    justify-content: left;
+                }
+  }
+
+  @media screen and (max-width:1150px) {
+    .home {
+            width: var(--width-screen);
+            grid-template-columns: repeat(1, 1fr);
+            padding:  0 !important;
+        }
+
+        .services__sec {
+            width: calc(var(--width-screen) - 35%);
+        }
+  }
+
+/*movil screen*/
+ @media screen and (max-width:800px) {
+
+:root {
+        --width-screen: 90%;
+        --size-nav: 1.1em;
+        --size-h1: 1.7em !important;
+        --size-h2: 1.5em;
+        --size-h3: 1.27em;
+        --size-p: .9em;
+        --line-h:auto;
+    }
+
+/*navbar styles movil */
+#navbar{
+    position: fixed;
+    background-color: var(--bg-main);
+    box-sizing: border-box;
+    margin:  0 auto ;
+    z-index: 1;
+    left: 5%;
+    top: 2%;
+    box-shadow: #0E3B51;
+    border-radius: 5px;
+    padding: 1.5% 1% !important;
+}
+
+#navbar div:nth-child(4) {
+
+    order: 4;
+    grid-column: 1 / -1;
+}
+
+#navbar .navbar-icon {
+    display: block;
+    background-color: var(--bg-main);
+    border: 0;
+    margin-right : auto ;
+}
+
+.navbar__btn button:nth-child(1) {
+    display: none !important;
+}
+
+.navbar__btn button:nth-child(2) {
+font-size: .66em ;
+}
+
+.navbar__btn {
+    display: flex !important;
+    margin-left: auto;    
+}
+
+#navbar .navbar-brand {
+    justify-content: right !important;
+    margin: 0 auto;
+    font-size: var(--size-p);
+    box-sizing: border-box;
+   
+}
+
+#navbar .navbar__group
+{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        width: 100%;
+        grid-template-rows: auto auto;
+        margin:  0 auto;
+        justify-content: center;
+        align-items: center;
+}   
+
+#navbar-list
+{
+    box-shadow: 0px 6px 5px 0px #00000017;
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+#navbar-list ul {
+    text-align: left;
+    display: grid ;
+    align-items: center;
+}
+#navbar-list li
+{
+    padding: 1rem  0;
+    padding-left: 2%;
+    font-size: var(--size-p);
+    color: var(--bg-principal) !important;
+    font-weight: 500;
+}
+
+/*main styles movil */
+.home 
+{
+  width: var(--width-screen);
+  grid-template-columns: repeat(1, 1fr);
+  padding: 2rem 0 !important;
+}
+
+   .home .main__bg {
+       background-image: url("../img/main.png");
+       background-position: center;
+       background-size: cover;
+       background-repeat: no-repeat;
+       height: 400px;
+       width: 100%;
+       border-radius: 10px;
+   }
+
+.home h1 
+{
+    order: 1 !important;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.home p {
+    padding:  1rem 0;
+    text-align: center;
+}
+       
+
+  .home > div > div
+  {
+    display: grid;
+    align-items: center;
+    grid-gap: 20px;
+    width: max-content;
+    margin:  0 auto;
+  }
+
+  .home div:nth-child(1) {
+    padding: 4rem 0 1rem 0;
+   
+  }
+
+    .home div:nth-child(2) > img
+    {
+        background-color: #0E3B51;
+        padding: 2rem 0;
+        display: none !important;
+    }
+
+  /*services styles movil */
+
+  .services {
+      padding: 1rem 0;
+  }
+
+ .services__sec {
+     width: var(--width-screen);
+ }
+
+ .services__sec h2, .services__sec p
+ {
+    text-align: center;
+ }
+ .services__sec span{
+    display: none;
+ }
+
+ .services__group svg {
+     width: 2.5rem;
+     height: 2.5rem;
+ }
+ .services__group > .col-md-6:nth-child(4)
+ {
+    order: -1 !important;
+ }   
+ 
+ .services__group>.col-md-6:nth-child(1) {
+     order: -1 !important;
+ }
+
+ .services__group>.col-md-6:nth-child(3) {
+     order: 1;
+ }
+        .services__group>.col-md-6:nth-child(6) {
+            order: 1;
+        }
+ 
+             
+    
+}
